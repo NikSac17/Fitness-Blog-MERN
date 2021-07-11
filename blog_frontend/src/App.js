@@ -9,7 +9,7 @@ import Contact from "./pages/Contact";
 import Error from "./pages/Error";
 
 import NavBar from "./pages/NavBar";
-import "./App.css";
+// import "./App.css";
 
 function App() {
   return (

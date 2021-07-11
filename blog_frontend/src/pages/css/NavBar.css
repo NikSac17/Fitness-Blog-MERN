@@ -4,6 +4,7 @@ nav{
     align-items: center;
     min-height: 6vh;
     background: grey;
+    margin: -10px;
 }
 
 .nav-links{

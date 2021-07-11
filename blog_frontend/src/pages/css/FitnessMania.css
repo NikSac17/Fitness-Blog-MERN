@@ -1,0 +1,15 @@
+/* body {
+    background-image: url("../images/myfit.jpeg");
+} */
+
+.container {
+    position: fixed;
+    /* or absolute */
+    top: 39%;
+    left: 25.5%;
+    color: white;
+    font-size: 35px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+

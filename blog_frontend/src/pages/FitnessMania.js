@@ -1,9 +1,11 @@
-import React from 'react'
+import React from 'react';
+import "./css/FitnessMania.css";
+
 
 const FitnessMania = () => {
     return (
-        <div>
-            <h1>FitnessMania</h1>
+        <div className="container">
+            <h1>Welcome to FitnessMania</h1>
         </div>
     )
 }
