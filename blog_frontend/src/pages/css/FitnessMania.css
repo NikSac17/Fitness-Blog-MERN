@@ -2,14 +2,23 @@
     background-image: url("../images/myfit.jpeg");
 } */
 
-.container {
-    position: fixed;
+/* .container {
+    background-image: url("../images/myfit.jpeg");
+    position: absolute; */
     /* or absolute */
-    top: 39%;
-    left: 25.5%;
+    /* top: 0%; */
+    /* left: 0%;
     color: white;
     font-size: 35px;
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    height: 100%;
+    width: 100%;
 }
+
+#heading{
+    position: relative;
+    top: 30%;
+    left:30%;
+} */
 
 

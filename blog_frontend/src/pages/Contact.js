@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./css/Contact.css";
 
 const Contact = () => {
   const [name, setName] = useState("");
@@ -30,51 +31,29 @@ const Contact = () => {
   };
 
   return (
-    <article>
-      <form className="form" onSubmit={handleSubmit}>
-        <div>
-          <label>Name:</label>
-          <input
-            type="text"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-          />
-        </div>
-        <div>
-          <label>Email:</label>
-          <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-        </div>
-        <div>
-          <label>Your Profession:</label>
-          <input
-            type="text"
-            value={profession}
-            onChange={(e) => setProfession(e.target.value)}
-          />
-        </div>
-        <div>
-          <label>Any fitness related doubt:</label>
-          <input
-            type="text"
-            value={doubt}
-            onChange={(e) => setDoubt(e.target.value)}
-          />
-        </div>
-        <div>
-          <label>Tell us how to imporve:</label>
-          <input
-            type="text"
-            value={feedback}
-            onChange={(e) => setFeedback(e.target.value)}
-          />
-        </div>
-        <button type="submit">Submit</button>
-      </form>
-    </article>
+    <div className="container">
+      <div className="mb-3">
+        <label htmlFor="exampleFormControlInput1" className="form-label">
+          Email address
+        </label>
+        <input
+          type="email"
+          className="form-control"
+          id="exampleFormControlInput1"
+          placeholder="name@example.com"
+        />
+      </div>
+      <div className="mb-3">
+        <label htmlFor="exampleFormControlTextarea1" className="form-label">
+          Example textarea
+        </label>
+        <textarea
+          className="form-control"
+          id="exampleFormControlTextarea1"
+          rows="3"
+        ></textarea>
+      </div>
+    </div>
   );
 };
 

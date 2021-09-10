@@ -1,10 +1,11 @@
-nav{
+/* nav{
     display: flex;
     justify-content:space-around;
     align-items: center;
     min-height: 6vh;
     background: grey;
     margin: -10px;
+    position: top;
 }
 
 .nav-links{
@@ -18,4 +19,4 @@ nav{
 
 .nav-links:active{
     color: white;
-}
+} */
