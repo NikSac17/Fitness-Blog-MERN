@@ -6,9 +6,18 @@ import Articles from "./pages/Articles";
 import FitnessMania from "./pages/FitnessMania";
 import FitnessCalculator from "./pages/FitnessCalculator";
 import Contact from "./pages/Contact";
+import Notes from "./pages/Notes";
 import Error from "./pages/Error";
+import Chest from "./pages/exercises/Chest";
+import Back from "./pages/exercises/Back";
+import Arms from "./pages/exercises/Arms";
+import Shoulders from "./pages/exercises/Shoulders";
+import Legs from "./pages/exercises/Legs";
+import Cardio from "./pages/exercises/Cardio";
+import Abs from "./pages/exercises/Abs";
 
 import NavBar from "./pages/NavBar";
+import Exercises from "./pages/Exercises";
 // import "./App.css";
 
 function App() {
@@ -22,6 +31,31 @@ function App() {
           <Route path="/about">
             <About />
           </Route>
+          <Route path="/exercises">
+            <Exercises />
+          </Route>
+          <Route path="/chest">
+            <Chest />
+          </Route>
+          <Route path="/back">
+            <Back />
+          </Route>
+          <Route path="/arms">
+            <Arms />
+          </Route>
+          <Route path="/shoulders">
+            <Shoulders />
+          </Route>
+          <Route path="/legs">
+            <Legs />
+          </Route>
+          <Route path="/cardio">
+            <Cardio />
+          </Route>
+          <Route path="/abs">
+            <Abs />
+          </Route>
+
           <Route path="/articles">
             <Articles />
           </Route>
@@ -31,6 +65,9 @@ function App() {
           </Route>
           <Route path="/fitnesscalculator">
             <FitnessCalculator />
+          </Route>
+          <Route path="/notes">
+            <Notes />
           </Route>
           <Route path="/contact">
             <Contact />

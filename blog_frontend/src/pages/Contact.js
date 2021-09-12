@@ -52,7 +52,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="container">
+    <div className="container my-4">
       <div className="mb-3">
         <label htmlFor="exampleFormControlTextarea1" className="form-label">
           Name

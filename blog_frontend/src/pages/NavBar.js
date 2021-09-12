@@ -4,7 +4,7 @@ import "./css/NavBar.css";
 
 const NavBar = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
   <div className="container-fluid">
     <Link className="navbar-brand" to="/fitnessmania">FitnessMania</Link>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -19,14 +19,17 @@ const NavBar = () => {
           <Link className="nav-link" to="/about">About</Link>
         </li>
         <li className="nav-item dropdown">
-          <Link className="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" to="/articles">Articles</Link>
+          <Link className="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Explore</Link>
           <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
             <li><Link className="dropdown-item" to="/exercises">Exercises</Link></li>           
-            <li><Link className="dropdown-item" to="/dietplans">Diet Plans</Link></li>
+            <li><Link className="dropdown-item" to="/articles">Articles</Link></li>
           </ul>
         </li>
         <li className="nav-item">
           <Link className="nav-link" to="/fitnesscalculator">FitnessCalculator</Link>
+        </li>
+        <li className="nav-item">
+          <Link className="nav-link" to="/notes">Scehdule Your Workout</Link>
         </li>
         <li className="nav-item">
           <Link className="nav-link" to="/contact">Contact Us</Link>
