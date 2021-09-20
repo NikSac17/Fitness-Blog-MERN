@@ -89,14 +89,3 @@ const About = () => {
 };
 
 export default About;
-
-{
-  /* <img className="img-fluid" data-src="holder.js/400x400/auto" alt="400x400" style="width: 500px; height: 500px;"
-              src={img1} data-holder-rendered="true"/> */
-}
-
-//               <img className="img-fluid" data-src="holder.js/400x400/auto" alt="400x400" style="width: 500px; height: 500px;"
-//               src={img2} data-holder-rendered="true"/>
-
-// <img className="img-fluid" data-src="holder.js/400x400/auto" alt="400x400" style="width: 500px; height: 500px;"
-//               src={img3} data-holder-rendered="true"/>

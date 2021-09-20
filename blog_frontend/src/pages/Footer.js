@@ -2,12 +2,14 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer class="container">
-      <p class="float-right">
+    <footer className="container">
+      <p className="float-right">
+        {/* eslint-disable-next-line */}
         <a href="#">Back to top</a>
       </p>
       <p>
-        © 2020-2021 Company, Inc. · <a href="#">Privacy</a> ·{" "}
+        {/* eslint-disable-next-line */}© 2020-2021 Company, Inc. ·{" "}
+        <a href="#">Privacy</a> · {/* eslint-disable-next-line */}
         <a href="#">Terms</a>
       </p>
     </footer>

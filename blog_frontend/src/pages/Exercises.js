@@ -10,7 +10,7 @@ const Exercises = () => {
     return (
         <div>
             <div class="container w-100  ">
-        <img src={img1} class="img-fluid  mx-auto d-block"/>
+        <img src={img1} class="img-fluid  mx-auto d-block" alt="img1"/>
     </div>
 
     <div class="container my-4">
@@ -39,7 +39,7 @@ const Exercises = () => {
                 </p>
             </div>
             <div class="col-md-5">
-                <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src={img2}/>
+                <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src={img2} alt="img2"/>
             </div>
         </div>
 
@@ -57,7 +57,7 @@ const Exercises = () => {
                     while giving your chest and triceps a break!</p>
             </div>
             <div class="col-md-5 order-md-1">
-                <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src={img3}/>
+                <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src={img3} alt="img3"/>
             </div>
         </div>
 
@@ -79,7 +79,7 @@ const Exercises = () => {
                 </ul>
             </div>
             <div class="col-md-5">
-                <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src={img4}/>
+                <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src={img4} alt="img4"/>
             </div>
         </div>
 
@@ -98,7 +98,7 @@ const Exercises = () => {
                 </p>
             </div>
             <div class="col-md-5 order-md-1">
-                <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src={img5}/>
+                <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src={img5} alt="img5"/>
             </div>
         </div>
     </div>

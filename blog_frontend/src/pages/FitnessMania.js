@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import img1 from "./images/myfit.jpeg";
+import React from "react";
+// import img1 from "./images/myfit.jpeg";
 import "./css/FitnessMania.css";
 
 const FitnessMania = () => {
