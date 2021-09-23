@@ -22,6 +22,8 @@ import Exercises from "./pages/Exercises";
 import Bmi from "./pages/fitnessCalculator/Bmi";
 import Bmr from "./pages/fitnessCalculator/Bmr";
 import Fat from "./pages/fitnessCalculator/Fat";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
 // import "./App.css";
 
 function App() {
@@ -29,7 +31,7 @@ function App() {
     <Router>
       <NavBar />
       <Switch>
-        <Route exact path="/" >
+        <Route exact path="/">
           <Home />
         </Route>
         <Route path="/about">
@@ -78,6 +80,12 @@ function App() {
         </Route>
         <Route path="/fat">
           <Fat />
+        </Route>
+        <Route path="/login">
+          <Login />
+        </Route>
+        <Route path="/signup">
+          <Signup />
         </Route>
         <Route path="/notes">
           <Notes />
