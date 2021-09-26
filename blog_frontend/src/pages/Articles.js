@@ -15,9 +15,7 @@ const Articles = () => {
       });
 
       const json = await response.json();
-    //   console.log("Fetched from API", json);
       setData(json);
-    //   console.log(data);
     };
 
     useEffect(() => {
@@ -26,16 +24,16 @@ const Articles = () => {
 
   return (
     <div>
-      <h1>Articles (will create API and fetch data from there)</h1>
       {data.length === 0 && "No articles to display"}
       {data.map((element) => {
-        const { _id, imgUrl, heading, description, timestamp } = element;
+        const { _id, imgUrl, heading, description, points, timestamp } = element;
         return (
           <ArticleItem
             key={_id}
             imgUrl={imgUrl}
             heading={heading}
             description={description}
+            points={points}
             date={timestamp}
           />
         );

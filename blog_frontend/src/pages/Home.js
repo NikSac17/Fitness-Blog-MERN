@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import img1 from "./images/1.jpeg";
 import img2 from "./images/2.jpg";
 import img3 from "./images/3.jpg";
 
 const Home = () => {
+
+  useEffect(()=>{
+  },[])
+
   return (
     <>
       <div

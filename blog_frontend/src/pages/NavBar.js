@@ -31,12 +31,12 @@ const NavBar = () => {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <Link className="nav-link active" aria-current="page" to="/">
+              <Link className={`nav-link ${location.pathname==='/' ? "active" : ""}`} aria-current="page" to="/">
                 Home
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/about">
+              <Link className={`nav-link ${location.pathname==='/about' ? "active" : ""}`} to="/about">
                 About
               </Link>
             </li>
@@ -64,17 +64,17 @@ const NavBar = () => {
               </ul>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/fitnesscalculator">
+              <Link className={`nav-link ${location.pathname==='/fitnesscalculator' ? "active" : ""}`} to="/fitnesscalculator">
                 FitnessCalculator
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/notes">
+              <Link className={`nav-link ${location.pathname==='/scheduleworkout' ? "active" : ""}`} to="/scheduleworkout">
                 Scehdule Your Workout
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/contact">
+              <Link className={`nav-link ${location.pathname==='/contact' ? "active" : ""}`} to="/contact">
                 Contact Us
               </Link>
             </li>

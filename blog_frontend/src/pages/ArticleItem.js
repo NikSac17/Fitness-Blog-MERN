@@ -1,26 +1,33 @@
 import React from "react";
 
-const ArticleItem = ({ _id, imgUrl, heading, description, date }) => {
+const ArticleItem = ({ _id, imgUrl, heading, description, date, points }) => {
   return (
-    <div className="container">
-      {/* <div className="card">
-        <img src={imgUrl} className="card-img-top" alt="Loading..." />
-        <div className="card-body">
-          <h5 className="card-title">{heading}</h5>
-          <p className="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </p>
-          <a href="#" className="btn btn-primary">
-            Go somewhere
-          </a>
+    <div className="container my-4">
+      <div class="row mb-2">
+        <div class="col-md-6">
+          <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="col p-4 d-flex flex-column position-static">
+              <h3 class="mb-0">{heading}</h3>
+              <div class="mb-1 text-muted">{date}</div>
+              <p class="card-text mb-auto">
+                {description[0].substring(0, 100)}...
+              </p>
+              <a href="fitness_ben.html" class="stretched-link">
+                Continue reading
+              </a>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <img
+                class="bd-placeholder-img"
+                width="200"
+                height="250"
+                src={imgUrl}
+                alt="Service Down..."
+              />
+            </div>
+          </div>
         </div>
-      </div> */}
-      {/*  eslint-disable-next-line */}
-      <img src={imgUrl} alt="Image To be displayed" />
-      <h1>{heading}</h1>
-      <h3>{date}</h3>
-      <p>{description}</p>
+      </div>
     </div>
   );
 };

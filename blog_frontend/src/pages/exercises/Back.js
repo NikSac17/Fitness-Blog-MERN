@@ -17,15 +17,15 @@ const Back = () => {
         <p>Below are shown some of the back exercises.</p>
         <hr />
         <h4>Bent Over Row</h4>
-        <img class="img-fluid" src={img1} alt="" />
+        <img className="img-fluid" src={img1} alt="" />
         <h4>Deadlifts</h4>
-        <img class="img-fluid" src={img2} alt="" />
+        <img className="img-fluid" src={img2} alt="" />
         <h4>One Hand T-Bar Row</h4>
-        <img class="img-fluid" src={img3} alt="" />
+        <img className="img-fluid" src={img3} alt="" />
         <h4>One Arm Dumbbell Row</h4>
-        <img class="img-fluid" src={img4} alt="" />
+        <img className="img-fluid" src={img4} alt="" />
         <h4>Incline Bench Row</h4>
-        <img class="img-fluid" src={img5} alt="" />
+        <img className="img-fluid" src={img5} alt="" />
       </div>
     </div>
   );

@@ -14,8 +14,11 @@ const ArticleSchema = new Schema({
         type: Date,
         default: Date.now
     },
+    points:{
+        type: Array
+    },
     description:{
-        type: String,
+        type: Array,
         required: true
     },
 });

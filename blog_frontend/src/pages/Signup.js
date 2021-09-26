@@ -33,39 +33,39 @@ const Signup = () => {
   return (
     <div className="container my-4">
       <form onSubmit={handleSubmit}>
-        <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label">
+        <div className="mb-3">
+          <label htmlFor="exampleInputEmail1" className="form-label">
             Name
           </label>
           <input
             type="name"
             name="name"
             value={cred.name}
-            class="form-control"
+            className="form-control"
             onChange={onChange}
             id="email"
             aria-describedby="emailHelp"
           />
         </div>
-        <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label">
+        <div className="mb-3">
+          <label htmlFor="exampleInputEmail1" className="form-label">
             Email
           </label>
           <input
             type="email"
             name="email"
             value={cred.email}
-            class="form-control"
+            className="form-control"
             onChange={onChange}
             id="email"
             aria-describedby="emailHelp"
           />
-          <div id="emailHelp" class="form-text">
+          <div id="emailHelp" className="form-text">
             We'll never share your email with anyone else.
           </div>
         </div>
-        <div class="mb-3">
-          <label for="exampleInputPassword1" class="form-label">
+        <div className="mb-3">
+          <label htmlFor="exampleInputPassword1" className="form-label">
             Password
           </label>
           <input
@@ -73,11 +73,11 @@ const Signup = () => {
             name="password"
             value={cred.password}
             onChange={onChange}
-            class="form-control"
+            className="form-control"
             id="password"
           />
         </div>
-        <button type="submit" class="btn btn-primary">
+        <button type="submit" className="btn btn-primary">
           Submit
         </button>
       </form>

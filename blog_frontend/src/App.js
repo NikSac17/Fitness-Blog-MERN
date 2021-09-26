@@ -6,7 +6,6 @@ import Articles from "./pages/Articles";
 import FitnessMania from "./pages/FitnessMania";
 import FitnessCalculator from "./pages/FitnessCalculator";
 import Contact from "./pages/Contact";
-import Notes from "./pages/Notes";
 import Error from "./pages/Error";
 import Footer from "./pages/Footer";
 import Chest from "./pages/exercises/Chest";
@@ -24,6 +23,7 @@ import Bmr from "./pages/fitnessCalculator/Bmr";
 import Fat from "./pages/fitnessCalculator/Fat";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
+import ScheduleWorkout from "./pages/ScheduleWorkout";
 // import "./App.css";
 
 function App() {
@@ -87,8 +87,8 @@ function App() {
         <Route path="/signup">
           <Signup />
         </Route>
-        <Route path="/notes">
-          <Notes />
+        <Route path="/scheduleworkout">
+          <ScheduleWorkout/>
         </Route>
         <Route path="/contact">
           <Contact />

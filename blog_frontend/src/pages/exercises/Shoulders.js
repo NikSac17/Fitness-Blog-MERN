@@ -18,15 +18,15 @@ const Shoulders = () => {
         <p>Below are shown some of the shoulder exercises.</p>
         <hr />
         <h4>Dumbbell Shoulder Press</h4>
-        <img class="img-fluid" src={img1} alt="" />
+        <img className="img-fluid" src={img1} alt="" />
         <h4>Overhead Press</h4>
-        <img class="img-fluid" src={img2} alt="" />
+        <img className="img-fluid" src={img2} alt="" />
         <h4>Arnold Press</h4>
-        <img class="img-fluid" src={img3} alt="" />
+        <img className="img-fluid" src={img3} alt="" />
         <h4>Lateral Raises</h4>
-        <img class="img-fluid" src={img4} alt="" />
+        <img className="img-fluid" src={img4} alt="" />
         <h4>Dumbbell Shrugs</h4>
-        <img class="img-fluid" src={img5} alt="" />
+        <img className="img-fluid" src={img5} alt="" />
       </div>
     </div>
   );

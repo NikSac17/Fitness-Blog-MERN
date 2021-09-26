@@ -18,15 +18,15 @@ const Arms = () => {
         <p>Below are shown some of the arms exercises.</p>
         <hr />
         <h4>Barbell Bicep Curl</h4>
-        <img class="img-fluid" src={img1} alt="" />
+        <img className="img-fluid" src={img1} alt="" />
         <h4>Incline Bench Dumbbell Curls</h4>
-        <img class="img-fluid" src={img2} alt="" />
+        <img className="img-fluid" src={img2} alt="" />
         <h4>Skull Crushers</h4>
-        <img class="img-fluid" src={img3} alt="" />
+        <img className="img-fluid" src={img3} alt="" />
         <h4>Tricep Extension</h4>
-        <img class="img-fluid" src={img4} alt="" />
+        <img className="img-fluid" src={img4} alt="" />
         <h4>Tricep Kickback</h4>
-        <img class="img-fluid" src={img5} alt="" />
+        <img className="img-fluid" src={img5} alt="" />
       </div>
     </div>
   );
