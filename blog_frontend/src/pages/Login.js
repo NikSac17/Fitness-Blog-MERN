@@ -21,7 +21,7 @@ const Login = () => {
     const json = await response.json();
     if (json.success) {
       localStorage.setItem("token", json.authToken);
-      history.push("/notes");
+      history.push("/scheduleworkout");
     }
   };
 

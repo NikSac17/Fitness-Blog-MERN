@@ -1,15 +1,23 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useContext } from "react";
+import noteContext from "./context/noteContext";
 
-const NoteItem = ({ data, getNotes }) => {
+const NoteItem = ({ note }) => {
+  const context = useContext(noteContext);
+  const {deleteNote} = context;
+
+    useEffect(()=>{
+        console.log(note);
+    },[])
   
   return (
-    <div>
-      <h1>NoteItem</h1>
-      {data.length !== 0 ? (
-        <div className="card">
+    <div className="col-md-3">
+      {note.length !== 0 ? (
+        <div className="card my-3">
           <div className="card-body">
-            <h5 className="card-title">{data.title}</h5>
-            <p className="card-text">{data.description}</p>
+            <h5 className="card-title">{note.title}</h5>
+            <p className="card-text">{note.description}</p>
+            <i class="fas fa-edit mx-2"></i>
+            <i class="fas fa-trash-alt mx-2" onClick={()=>{deleteNote(note._id)}}></i>
           </div>
         </div>
       ) : (

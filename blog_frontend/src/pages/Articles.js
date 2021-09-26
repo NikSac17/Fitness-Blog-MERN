@@ -23,7 +23,7 @@ const Articles = () => {
     }, []);
 
   return (
-    <div>
+    <div className="row my-3">
       {data.length === 0 && "No articles to display"}
       {data.map((element) => {
         const { _id, imgUrl, heading, description, points, timestamp } = element;

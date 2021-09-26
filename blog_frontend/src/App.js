@@ -24,81 +24,84 @@ import Fat from "./pages/fitnessCalculator/Fat";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import ScheduleWorkout from "./pages/ScheduleWorkout";
+import NoteState from "./pages/context/NoteState";
 // import "./App.css";
 
 function App() {
   return (
-    <Router>
-      <NavBar />
-      <Switch>
-        <Route exact path="/">
-          <Home />
-        </Route>
-        <Route path="/about">
-          <About />
-        </Route>
-        <Route path="/exercises">
-          <Exercises />
-        </Route>
-        <Route path="/chest">
-          <Chest />
-        </Route>
-        <Route path="/back">
-          <Back />
-        </Route>
-        <Route path="/arms">
-          <Arms />
-        </Route>
-        <Route path="/shoulders">
-          <Shoulders />
-        </Route>
-        <Route path="/legs">
-          <Legs />
-        </Route>
-        <Route path="/cardio">
-          <Cardio />
-        </Route>
-        <Route path="/abs">
-          <Abs />
-        </Route>
+    <NoteState>
+      <Router>
+        <NavBar />
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/about">
+            <About />
+          </Route>
+          <Route path="/exercises">
+            <Exercises />
+          </Route>
+          <Route path="/chest">
+            <Chest />
+          </Route>
+          <Route path="/back">
+            <Back />
+          </Route>
+          <Route path="/arms">
+            <Arms />
+          </Route>
+          <Route path="/shoulders">
+            <Shoulders />
+          </Route>
+          <Route path="/legs">
+            <Legs />
+          </Route>
+          <Route path="/cardio">
+            <Cardio />
+          </Route>
+          <Route path="/abs">
+            <Abs />
+          </Route>
 
-        <Route path="/articles">
-          <Articles />
-        </Route>
-        <Route path="/fitnessmania">
-          {/* //intro page */}
-          <FitnessMania />
-        </Route>
-        <Route path="/fitnesscalculator">
-          <FitnessCalculator />
-        </Route>
-        <Route path="/bmi">
-          <Bmi />
-        </Route>
-        <Route path="/bmr">
-          <Bmr />
-        </Route>
-        <Route path="/fat">
-          <Fat />
-        </Route>
-        <Route path="/login">
-          <Login />
-        </Route>
-        <Route path="/signup">
-          <Signup />
-        </Route>
-        <Route path="/scheduleworkout">
-          <ScheduleWorkout/>
-        </Route>
-        <Route path="/contact">
-          <Contact />
-        </Route>
-        <Route path="*">
-          <Error />
-        </Route>
-      </Switch>
-      <Footer />
-    </Router>
+          <Route path="/articles">
+            <Articles />
+          </Route>
+          <Route path="/fitnessmania">
+            {/* //intro page */}
+            <FitnessMania />
+          </Route>
+          <Route path="/fitnesscalculator">
+            <FitnessCalculator />
+          </Route>
+          <Route path="/bmi">
+            <Bmi />
+          </Route>
+          <Route path="/bmr">
+            <Bmr />
+          </Route>
+          <Route path="/fat">
+            <Fat />
+          </Route>
+          <Route path="/login">
+            <Login />
+          </Route>
+          <Route path="/signup">
+            <Signup />
+          </Route>
+          <Route path="/scheduleworkout">
+            <ScheduleWorkout />
+          </Route>
+          <Route path="/contact">
+            <Contact />
+          </Route>
+          <Route path="*">
+            <Error />
+          </Route>
+        </Switch>
+        <Footer />
+      </Router>
+    </NoteState>
   );
 }
 
