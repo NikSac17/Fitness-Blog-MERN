@@ -25,7 +25,7 @@ const Bmr = () => {
   };
 
   return (
-    <div className="container">
+    <div className="temp">
       <FitnessCalcNav />
       <h1>BMR Calculator</h1>
       <div className="mb-3 form-group w-25">

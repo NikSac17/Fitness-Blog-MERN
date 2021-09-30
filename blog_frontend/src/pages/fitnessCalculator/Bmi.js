@@ -39,7 +39,7 @@ const Bmi = () => {
     setWt(event.target.value);
   };
   return (
-    <div className="container">
+    <div className="temp">
       {show && <FitnessCalcNav/>}
       <h1>BMI Calculator</h1>
       <div className="mb-3 form-group w-25">

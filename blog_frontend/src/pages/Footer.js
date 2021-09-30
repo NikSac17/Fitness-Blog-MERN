@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="container">
+    <footer className="footer">
       <p className="float-right">
         {/* eslint-disable-next-line */}
         <a href="#">Back to top</a>

@@ -31,7 +31,7 @@ const Fat = () => {
   };
 
   return (
-    <div className="container">
+    <div className="temp">
       <FitnessCalcNav />
       <h1>Fat Percentage Calculator</h1>
       <div className="mb-3 form-group w-25">

@@ -5,7 +5,7 @@ import Bmi from "./fitnessCalculator/Bmi";
 const FitnessCalculator = () => {
   return (
     <>
-      <div className="container">
+      <div className="temp">
         <FitnessCalcNav />
       </div>
       <Bmi />

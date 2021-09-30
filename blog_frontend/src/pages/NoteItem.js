@@ -1,9 +1,9 @@
 import React, { useEffect, useContext } from "react";
 import noteContext from "./context/noteContext";
 
-const NoteItem = ({ note }) => {
+const NoteItem = ({ note, editNote}) => {
   const context = useContext(noteContext);
-  const {deleteNote} = context;
+  const { deleteNote} = context;
 
     useEffect(()=>{
         console.log(note);
@@ -16,7 +16,7 @@ const NoteItem = ({ note }) => {
           <div className="card-body">
             <h5 className="card-title">{note.title}</h5>
             <p className="card-text">{note.description}</p>
-            <i className="fas fa-edit mx-2"></i>
+            <i className="fas fa-edit mx-2" onClick={()=>{editNote(note)}}></i>
             <i className="fas fa-trash-alt mx-2" onClick={()=>{deleteNote(note._id)}}></i>
           </div>
         </div>
