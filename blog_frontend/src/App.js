@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -26,13 +26,27 @@ import Signup from "./pages/Signup";
 import ScheduleWorkout from "./pages/ScheduleWorkout";
 import NoteState from "./pages/context/NoteState";
 import ArticleSoloPage from "./pages/ArticleSoloPage";
+import Alert from "./pages/Alert";
 // import "./App.css";
 
 function App() {
+  const [alert, setAlert] = useState(null);
+
+  const showAlert = (message, type) => {
+    setAlert({
+      msg: message,
+      type: type,
+    });
+    setTimeout(() => {
+      setAlert(null);
+    }, 2000);
+  };
+
   return (
     <NoteState>
       <Router>
-        <NavBar />
+        <NavBar showAlert={showAlert}/>
+        <Alert alert={alert}/>
         <Switch>
           <Route exact path="/">
             <Home />
@@ -75,9 +89,9 @@ function App() {
             {/* //intro page */}
             <FitnessMania />
           </Route>
-          <Route path="/fitnesscalculator">
+          {/* <Route path="/fitnesscalculator">
             <FitnessCalculator />
-          </Route>
+          </Route> */}
           <Route path="/bmi">
             <Bmi />
           </Route>
@@ -88,22 +102,22 @@ function App() {
             <Fat />
           </Route>
           <Route path="/login">
-            <Login />
+            <Login showAlert={showAlert} />
           </Route>
           <Route path="/signup">
-            <Signup />
+            <Signup showAlert={showAlert} />
           </Route>
           <Route path="/scheduleworkout">
-            <ScheduleWorkout />
+            <ScheduleWorkout showAlert={showAlert}/>
           </Route>
           <Route path="/contact">
-            <Contact />
+            <Contact showAlert={showAlert}/>
           </Route>
           <Route path="*">
             <Error />
           </Route>
         </Switch>
-        <Footer />
+        {/* <Footer /> */}
       </Router>
     </NoteState>
   );

@@ -2,13 +2,15 @@ import React from "react";
 import { Link, useLocation, useHistory } from "react-router-dom";
 import "./css/NavBar.css";
 
-const NavBar = () => {
+const NavBar = ({showAlert}) => {
   let location = useLocation();
   let history = useHistory();
 
   const handleLogout = () => {
     localStorage.removeItem("token");
+    localStorage.removeItem("username");
     history.push("/login");
+    showAlert("Logged out successfully", "success")
   };
 
   return (
@@ -64,13 +66,13 @@ const NavBar = () => {
               </ul>
             </li>
             <li className="nav-item">
-              <Link className={`nav-link ${location.pathname==='/fitnesscalculator' ? "active" : ""}`} to="/fitnesscalculator">
+              <Link className={`nav-link ${location.pathname==='/bmi' ? "active" : ""}`} to="/bmi">
                 FitnessCalculator
               </Link>
             </li>
             <li className="nav-item">
               <Link className={`nav-link ${location.pathname==='/scheduleworkout' ? "active" : ""}`} to="/scheduleworkout">
-                Scehdule Your Workout
+                Schedule Your Workout
               </Link>
             </li>
             <li className="nav-item">

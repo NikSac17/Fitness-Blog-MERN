@@ -1,10 +1,10 @@
 import React from 'react'
 import Notes from './Notes'
 
-const ScheduleWorkout = () => {
+const ScheduleWorkout = ({showAlert}) => {
     return (
         <div className="container">
-            <Notes/>
+            <Notes showAlert={showAlert}/>
         </div>
     )
 }

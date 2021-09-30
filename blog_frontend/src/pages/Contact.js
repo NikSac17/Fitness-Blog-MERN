@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./css/Contact.css";
 
-const Contact = () => {
+const Contact = ({showAlert}) => {
   const [data, setData] = useState({
     name: "",
     email: "",
@@ -23,6 +23,7 @@ const Contact = () => {
     const json = await response.json();
     console.log(json);
     setData({name:"", email:"", profession:"", doubt:"", feedback:""});
+    showAlert("Details submitted Successfully", "success")
   };
 
   const onChange=(e)=>{

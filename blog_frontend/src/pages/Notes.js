@@ -4,7 +4,7 @@ import noteContext from "./context/noteContext";
 import AddNote from "./AddNote";
 import NoteItem from "./NoteItem";
 
-const Notes = () => {
+const Notes = ({showAlert}) => {
   const context = useContext(noteContext);
   const { data, getNotes, updateNote } = context;
   let history = useHistory();
@@ -35,6 +35,7 @@ const Notes = () => {
   const handleClick = (e) => {
     updateNote(note.id, note.etitle, note.edescription);
     refClose.current.click();
+    showAlert("Note updated", "success")
   };
 
   const onChange = (e) => {
@@ -43,7 +44,7 @@ const Notes = () => {
 
   return (
     <div className="row my-3">
-      <AddNote />
+      <AddNote showAlert={showAlert}/>
 
       {/* update modal start */}
 
@@ -137,7 +138,7 @@ const Notes = () => {
 
       {data.length === 0 && "No notes to display"}
       {data.map((note, _id) => {
-        return <NoteItem key={_id} editNote={editNote} note={note} />;
+        return <NoteItem key={_id} editNote={editNote} note={note} showAlert={showAlert}/>;
       })}
     </div>
   );

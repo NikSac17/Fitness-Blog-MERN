@@ -1,19 +1,12 @@
 import React from "react";
-// import img1 from "./images/myfit.jpeg";
+import img1 from "./images/myfit.jpeg";
 import "./css/FitnessMania.css";
 
 const FitnessMania = () => {
-
-  // const [myStyle,setMyStyle] = useState({
-  //   body {
-  //     background-image: url({img1})
-  // }
-  // });
-
-
   return (
-    <div className="container">
-      <h1>Welcome to FitnessMania</h1>
+    <div>
+      <img src={img1} className="fitnessmania-image" alt="Snow"/>
+      <p className="fitnessmania-heading">Welcome to FitnessMania</p>
     </div>
   );
 };

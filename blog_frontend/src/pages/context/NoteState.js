@@ -44,6 +44,7 @@ const NoteState = (props) => {
       body: JSON.stringify({ title, description }),
     });
 
+    // eslint-disable-next-line
     const json = await response.json();
 
     let newData = JSON.parse(JSON.stringify(data));
@@ -68,6 +69,7 @@ const NoteState = (props) => {
         "auth-token": localStorage.getItem("token"),
       },
     });
+    // eslint-disable-next-line
     const json = response.json();
     const newData = data.filter((element) => {
       return element._id !== id;

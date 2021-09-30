@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 
-const Login = () => {
+const Login = ({showAlert}) => {
   let history = useHistory();
 
   const [cred, setCred] = useState({ email: "", password: "" });
@@ -23,6 +23,10 @@ const Login = () => {
       localStorage.setItem("token", json.authToken);
       localStorage.setItem("username",json.username);
       history.push("/scheduleworkout"); //after login redirect to corresponding page
+      showAlert("Login Successfully", "success")
+    }
+    else{
+      showAlert("Invalid Credentials", "danger")
     }
   };
 
