@@ -90,9 +90,13 @@ const NavBar = () => {
             </form>
           ) : (
             <form>
-              <button onClick={handleLogout} className="btn btn-primary">
-                Logout
+              <button onClick={handleLogout} className="btn btn-danger">
+                Logout 
+                {/* <i class="far fa-user-circle fa-lg"></i> */}
               </button>
+              <div className="btn btn-primary">
+                {localStorage.getItem("username")}
+              </div>
             </form>
           )}
         </div>

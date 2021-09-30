@@ -34,7 +34,30 @@ const NoteState = (props) => {
   };
 
   //update note
-  const updateNote = async () => {};
+  const updateNote = async (id, title, description) => {
+    const response = await fetch(`${host}/api/notes/updatenote/${id}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+        "auth-token": localStorage.getItem("token"),
+      },
+      body: JSON.stringify({ title, description }),
+    });
+
+    const json = response(json);
+
+    let newData = JSON.parse(JSON.stringify(data));
+    for(let i=0;i<newData.length;i++){
+      const element = newData[i];
+      if(element._id===id){
+        newData[i].title=title;
+        newData[i].description=description;
+        break;
+      }
+    }
+
+    setData(newData);
+  };
 
   //delete note
   const deleteNote = async (id) => {
@@ -53,11 +76,11 @@ const NoteState = (props) => {
   };
 
   return (
-      <NoteContext.Provider
-        value={{ data, getNotes, addNote, updateNote, deleteNote }}
-      >
-        {props.children}
-      </NoteContext.Provider>
+    <NoteContext.Provider
+      value={{ data, getNotes, addNote, updateNote, deleteNote }}
+    >
+      {props.children}
+    </NoteContext.Provider>
   );
 };
 

@@ -1,24 +1,32 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-const ArticleItem = ({ _id, imgUrl, heading, description, date, points }) => {
+const ArticleItem = ({ imgUrl, heading, description, date, points }) => {
   return (
     <div className="container col-md-5 my-3">
-      <div class="row mb-2">
-        <div >
-          <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-            <div class="col p-4 d-flex flex-column position-static">
-              <h3 class="mb-0">{heading}</h3>
-              <div class="mb-1 text-muted">{date}</div>
-              <p class="card-text mb-auto">
+      <div className="row mb-2">
+        <div>
+          <div className="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div className="col p-4 d-flex flex-column position-static">
+              <h3 className="mb-0">{heading}</h3>
+              <p className="card-text mb-auto">
                 {description[0].substring(0, 90)}...
               </p>
-              <a href="fitness_ben.html" class="stretched-link">
-                Continue reading
-              </a>
+              <Link
+                to={{
+                  pathname: "/articlePage",
+                  search: "?sort=name",
+                  hash: "#the-hash",
+                  state: { heading: heading },
+                }}
+                target="_blank"
+              >
+                continue reading...
+              </Link>
             </div>
-            <div class="col-auto d-none d-lg-block">
+            <div className="col-auto d-none d-lg-block">
               <img
-                class="bd-placeholder-img"
+                className="bd-placeholder-img"
                 width="200"
                 height="250"
                 src={imgUrl}

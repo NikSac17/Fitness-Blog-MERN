@@ -25,6 +25,7 @@ import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import ScheduleWorkout from "./pages/ScheduleWorkout";
 import NoteState from "./pages/context/NoteState";
+import ArticleSoloPage from "./pages/ArticleSoloPage";
 // import "./App.css";
 
 function App() {
@@ -66,6 +67,9 @@ function App() {
 
           <Route path="/articles">
             <Articles />
+          </Route>
+          <Route path="/articlePage">
+            <ArticleSoloPage />
           </Route>
           <Route path="/fitnessmania">
             {/* //intro page */}

@@ -66,7 +66,7 @@ const Home = () => {
         </button>
       </div>
 
-      <h1>Will fetch latest 6 articles from API created and used for Articles page</h1>
+      <h1>Will fetch latest 4 articles from API created and used for Articles page</h1>
     </>
   );
 };

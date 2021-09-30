@@ -21,7 +21,8 @@ const Login = () => {
     const json = await response.json();
     if (json.success) {
       localStorage.setItem("token", json.authToken);
-      history.push("/scheduleworkout");
+      localStorage.setItem("username",json.username);
+      history.push("/scheduleworkout"); //after login redirect to corresponding page
     }
   };
 
