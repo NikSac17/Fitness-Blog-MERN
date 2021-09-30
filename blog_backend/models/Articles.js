@@ -2,7 +2,11 @@ const mongoose = require("mongoose");
 const {Schema} = mongoose;
 
 const ArticleSchema = new Schema({
-    imgUrl:{
+    imgUrl1:{
+        type: String,
+        required: true
+    },
+    imgUrl2:{
         type: String,
         required: true
     },
@@ -11,8 +15,8 @@ const ArticleSchema = new Schema({
         required: true
     },
     timestamp:{
-        type: Date,
-        default: Date.now
+        type: String,
+        default: Date().toString()
     },
     points:{
         type: Array

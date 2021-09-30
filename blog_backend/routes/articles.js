@@ -5,10 +5,11 @@ const router = express.Router();
 //route 1: add articles in db using POST "/api/articles"
 router.post("/", async (req, res) => {
   try {
-    const { imgUrl, heading, description, points } = req.body;
+    const { imgUrl1, imgUrl2, heading, description, points } = req.body;
 
     const article = new Article({
-      imgUrl,
+      imgUrl1,
+      imgUrl2,
       heading,
       description,
       points
