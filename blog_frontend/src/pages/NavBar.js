@@ -2,7 +2,7 @@ import React from "react";
 import { Link, useLocation, useHistory } from "react-router-dom";
 import "./css/NavBar.css";
 
-const NavBar = ({showAlert}) => {
+const NavBar = ({ showAlert }) => {
   let location = useLocation();
   let history = useHistory();
 
@@ -10,7 +10,7 @@ const NavBar = ({showAlert}) => {
     localStorage.removeItem("token");
     localStorage.removeItem("username");
     history.push("/login");
-    showAlert("Logged out successfully", "success")
+    showAlert("Logged out successfully", "success");
   };
 
   return (
@@ -33,12 +33,23 @@ const NavBar = ({showAlert}) => {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <Link className={`nav-link ${location.pathname==='/' ? "active" : ""}`} aria-current="page" to="/">
+              <Link
+                className={`nav-link ${
+                  location.pathname === "/" ? "active" : ""
+                }`}
+                aria-current="page"
+                to="/"
+              >
                 Home
               </Link>
             </li>
             <li className="nav-item">
-              <Link className={`nav-link ${location.pathname==='/about' ? "active" : ""}`} to="/about">
+              <Link
+                className={`nav-link ${
+                  location.pathname === "/about" ? "active" : ""
+                }`}
+                to="/about"
+              >
                 About
               </Link>
             </li>
@@ -66,17 +77,32 @@ const NavBar = ({showAlert}) => {
               </ul>
             </li>
             <li className="nav-item">
-              <Link className={`nav-link ${location.pathname==='/bmi' ? "active" : ""}`} to="/bmi">
+              <Link
+                className={`nav-link ${
+                  location.pathname === "/bmi" ? "active" : ""
+                }`}
+                to="/bmi"
+              >
                 FitnessCalculator
               </Link>
             </li>
             <li className="nav-item">
-              <Link className={`nav-link ${location.pathname==='/scheduleworkout' ? "active" : ""}`} to="/scheduleworkout">
+              <Link
+                className={`nav-link ${
+                  location.pathname === "/scheduleworkout" ? "active" : ""
+                }`}
+                to="/scheduleworkout"
+              >
                 Schedule Your Workout
               </Link>
             </li>
             <li className="nav-item">
-              <Link className={`nav-link ${location.pathname==='/contact' ? "active" : ""}`} to="/contact">
+              <Link
+                className={`nav-link ${
+                  location.pathname === "/contact" ? "active" : ""
+                }`}
+                to="/contact"
+              >
                 Contact Us
               </Link>
             </li>
@@ -93,7 +119,7 @@ const NavBar = ({showAlert}) => {
           ) : (
             <form>
               <button onClick={handleLogout} className="btn btn-danger">
-                Logout 
+                Logout
                 {/* <i class="far fa-user-circle fa-lg"></i> */}
               </button>
               <div className="btn btn-primary">

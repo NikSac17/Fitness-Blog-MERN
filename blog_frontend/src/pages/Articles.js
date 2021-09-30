@@ -26,11 +26,12 @@ const Articles = () => {
     <div className="row my-3">
       {data.length === 0 && "No articles to display"}
       {data.map((element) => {
-        const { _id, imgUrl, heading, description, points, timestamp } = element;
+        const { _id, imgUrl1, imgUrl2, heading, description, points, timestamp } = element;
         return (
           <ArticleItem
             key={_id}
-            imgUrl={imgUrl}
+            imgUrl1={imgUrl1}
+            imgUrl2={imgUrl2}
             heading={heading}
             description={description}
             points={points}

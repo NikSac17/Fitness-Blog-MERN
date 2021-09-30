@@ -1,7 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
-const ArticleItem = ({ imgUrl, heading, description, date, points }) => {
+const ArticleItem = ({ imgUrl1, imgUrl2, heading, description, date, points }) => {
+
   return (
     <div className="container col-md-5 my-3">
       <div className="row mb-2">
@@ -15,9 +16,9 @@ const ArticleItem = ({ imgUrl, heading, description, date, points }) => {
               <Link
                 to={{
                   pathname: "/articlePage",
-                  state: { heading: heading },
+                  state: { imgUrl2, heading, description, date, points },
                 }}
-                target="_blank"
+              
               >
                 continue reading...
               </Link>
@@ -27,8 +28,8 @@ const ArticleItem = ({ imgUrl, heading, description, date, points }) => {
                 className="bd-placeholder-img"
                 width="200"
                 height="250"
-                src={imgUrl}
-                alt="Service Down..."
+                src={imgUrl1}
+                alt="Loading Soon..."
               />
             </div>
           </div>
