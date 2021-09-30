@@ -15,8 +15,6 @@ const ArticleItem = ({ imgUrl, heading, description, date, points }) => {
               <Link
                 to={{
                   pathname: "/articlePage",
-                  search: "?sort=name",
-                  hash: "#the-hash",
                   state: { heading: heading },
                 }}
                 target="_blank"

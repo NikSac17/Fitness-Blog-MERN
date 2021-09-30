@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import FitnessCalcNav from "../FitnessCalcNav";
-import {useLocation} from "react-router-dom";
+import { useLocation } from "react-router-dom";
+import img from "../images/bmi.jpeg";
 
 const Bmi = () => {
-
   let location = useLocation();
   let show = false;
 
-  if(location.pathname==="/bmi"){
-      show=true;
+  if (location.pathname === "/bmi") {
+    show = true;
   }
 
   const [height, setHeight] = useState("");
@@ -39,45 +39,48 @@ const Bmi = () => {
     setWt(event.target.value);
   };
   return (
-    <div className="temp">
-      {show && <FitnessCalcNav/>}
-      <h1>BMI Calculator</h1>
-      <div className="mb-3 form-group w-25">
-        <label htmlFor="exampleFormControlInput1" className="form-label">
-          Height
-        </label>
-        <input
-          type="number"
-          value={height}
-          onChange={htEvent}
-          className="form-control"
-          placeholder="Height in cm"
-          id="exampleFormControlInput1"
-        />
-      </div>
-      <div className="mb-3 form-group w-25">
-        <label htmlFor="exampleFormControlInput1" className="form-label">
-          Weight
-        </label>
-        <input
-          type="number"
-          value={wt}
-          onChange={wtEvent}
-          placeholder="Weight in kg"
-          className="form-control"
-          id="exampleFormControlInput1"
-        />
-      </div>
-      {bmiRes && (
-        <div className="container">
-          <p>Your BMI is: {bmiRes} </p>
-          <p>You are currently: {status}</p>
+    <>
+      <img src={img} className="bmi-image" alt="Snow" />
+      <div className="temp">
+        {show && <FitnessCalcNav />}
+        <h1>BMI Calculator</h1>
+        <div className="mb-3 form-group w-25">
+          <label htmlFor="exampleFormControlInput1" className="form-label">
+            Height
+          </label>
+          <input
+            type="number"
+            value={height}
+            onChange={htEvent}
+            className="form-control"
+            placeholder="Height in cm"
+            id="exampleFormControlInput1"
+          />
         </div>
-      )}
-      <button type="button" className="btn btn-primary" onClick={calBMI}>
-        Calculate
-      </button>
-    </div>
+        <div className="mb-3 form-group w-25">
+          <label htmlFor="exampleFormControlInput1" className="form-label">
+            Weight
+          </label>
+          <input
+            type="number"
+            value={wt}
+            onChange={wtEvent}
+            placeholder="Weight in kg"
+            className="form-control"
+            id="exampleFormControlInput1"
+          />
+        </div>
+        {bmiRes && (
+          <div className="container">
+            <p>Your BMI is: {bmiRes} </p>
+            <p>You are currently: {status}</p>
+          </div>
+        )}
+        <button type="button" className="btn btn-primary" onClick={calBMI}>
+          Calculate
+        </button>
+      </div>
+    </>
   );
 };
 

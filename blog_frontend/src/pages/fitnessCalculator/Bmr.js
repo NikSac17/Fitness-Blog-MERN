@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import FitnessCalcNav from "../FitnessCalcNav";
+import img from "../images/bmr.jpeg";
 
 const Bmr = () => {
   const [wt, setWt] = useState("");
@@ -25,6 +26,8 @@ const Bmr = () => {
   };
 
   return (
+    <>
+      <img src={img} className="bmi-image" alt="Snow" />
     <div className="temp">
       <FitnessCalcNav />
       <h1>BMR Calculator</h1>
@@ -76,6 +79,7 @@ const Bmr = () => {
         Calculate
       </button>
     </div>
+    </>
   );
 };
 

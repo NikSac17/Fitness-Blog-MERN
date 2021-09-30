@@ -10,20 +10,17 @@
   margin-right: 30%;
   align-items: center;
   text-align: center;
+  position: absolute;
+  background-color: white;
 }
-
 
 .margin-nav-left {
   margin-left: 6%;
 }
 
-.fitness-nav-font {
-}
-
-
 /* fitnessmania i.e. intro page */
 
-.fitnessmania-image{
+.fitnessmania-image {
   height: 100vh;
   width: 100vw;
   position: fixed;
@@ -39,3 +36,16 @@
   transform: translate(-50%, -50%);
 }
 
+/* alert styling */
+
+.alert-position {
+  position: fixed;
+}
+
+/* fitness calculator */
+
+.bmi-image {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+}

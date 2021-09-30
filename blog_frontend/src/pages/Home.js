@@ -5,8 +5,6 @@ import img3 from "./images/3.jpg";
 
 const Home = () => {
 
-  useEffect(()=>{
-  },[])
 
   return (
     <>
