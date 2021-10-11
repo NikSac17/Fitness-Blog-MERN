@@ -1,8 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const ArticleItem = ({ imgUrl1, imgUrl2, heading, description, date, points }) => {
-
+const Homeitem = ({ imgUrl1, imgUrl2, heading, description, date, points }) => {
   return (
     <div className="container col-md-5 my-3">
       <div className="row mb-2">
@@ -18,7 +17,6 @@ const ArticleItem = ({ imgUrl1, imgUrl2, heading, description, date, points }) =
                   pathname: "/articlePage",
                   state: { imgUrl2, heading, description, date, points },
                 }}
-              
               >
                 continue reading...
               </Link>
@@ -39,4 +37,4 @@ const ArticleItem = ({ imgUrl1, imgUrl2, heading, description, date, points }) =
   );
 };
 
-export default ArticleItem;
+export default Homeitem;

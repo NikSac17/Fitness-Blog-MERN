@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useLocation } from "react-router-dom";
 
 const ArticleSoloPage = () => {
@@ -21,14 +21,18 @@ const ArticleSoloPage = () => {
       <div className="container my-4">
         <div className="blog-post">
           <h2 className="blog-post-title">{heading}</h2>
-          <b className="blog-post-meta">{date.substring(0,16)}</b>
+          <b className="blog-post-meta">{date.substring(0, 16)}</b>
 
           {description.map((item) => {
             return <p>{item}</p>;
           })}
 
           {points.map((item) => {
-            return <ul>{item}</ul>;
+            return (
+              <ul>
+                <li>{item}</li>
+              </ul>
+            );
           })}
         </div>
       </div>

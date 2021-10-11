@@ -1,10 +1,28 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import Homeitem from "./Homeitem";
 import img1 from "./images/1.jpeg";
 import img2 from "./images/2.jpg";
 import img3 from "./images/3.jpg";
 
 const Home = () => {
+  const initialData = [];
+  const [data, setData] = useState(initialData);
 
+  const getArticles = async () => {
+    const response = await fetch("http://localhost:5000/api/articles", {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+
+    const json = await response.json();
+    setData(json);
+  };
+
+  useEffect(() => {
+    getArticles();
+  }, []);
 
   return (
     <>
@@ -64,7 +82,22 @@ const Home = () => {
         </button>
       </div>
 
-      <h1>Will fetch latest 4 articles from API created and used for Articles page</h1>
+      <div className="row my-3">
+        {data.slice(-4).map((element) => {
+          const { _id, imgUrl1, imgUrl2, heading, description, points, timestamp } = element;
+          return (
+            <Homeitem
+              key={_id}
+              imgUrl1={imgUrl1}
+              imgUrl2={imgUrl2}
+              heading={heading}
+              description={description}
+              points={points}
+              date={timestamp}
+            />
+          );
+        })}
+      </div>
     </>
   );
 };
