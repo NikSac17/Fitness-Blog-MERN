@@ -2,7 +2,7 @@
 
 This blog is for fitness enthusiasts.
 
-I used MERN(Mongodb, ExpressJs, ReactJs, NodeJs) stack to make this with my friend [Nitish](https://github.com/msnitish).
+I used MERN(Mongodb, ExpressJs, ReactJs, NodeJs) stack to make this project.
 
 
 For running this application in local, follow these steps:
