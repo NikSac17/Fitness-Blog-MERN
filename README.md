@@ -17,6 +17,7 @@ I used MERN(Mongodb, ExpressJs, ReactJs, NodeJs) stack to make this project.
 ![Explore1](https://user-images.githubusercontent.com/50578215/148692743-d56b8b4e-ce5f-4745-bfa3-6073736fe538.png)
 
 5. Articles Page
+This contains various fitness related articles, which are fetched from db
 ![Explore2](https://user-images.githubusercontent.com/50578215/148692753-041442b1-e23f-4ce2-87e9-39056b9e2396.png)
 
 6. Fitness Calculator
@@ -25,7 +26,7 @@ I used MERN(Mongodb, ExpressJs, ReactJs, NodeJs) stack to make this project.
 7. Login Page
 ![Login Page](https://user-images.githubusercontent.com/50578215/148692810-c742c143-4423-475a-b862-56673a2aaf57.png)
 
-8. Schedule Your Workout
+8. Schedule Your Workout : Contains a TODO App, where user can schedule their workout, with all the CRUD operations.
 ![Schedule App](https://user-images.githubusercontent.com/50578215/148692819-489d2573-6ab1-497b-84e4-90d434c888ba.png)
 
 9. Contact Page
