@@ -8,7 +8,7 @@ const fetchuser = async(req,res,next)=>{
     //get user from jwt token and id to req object
     const token = req.header("auth-token");
     if(!token){
-        return res.staus(401).send({error: "Please authenticate with proper credentials"});
+        return res.status(401).send({error: "Please authenticate with proper credentials"});
     }
 
     try {
