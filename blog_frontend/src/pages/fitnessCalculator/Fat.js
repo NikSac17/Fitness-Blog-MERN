@@ -37,7 +37,7 @@ const Fat = () => {
       <div className="temp">
         <FitnessCalcNav />
         <h1>Fat Percentage Calculator</h1>
-        <div className="mb-3 form-group w-25">
+        <div className="mb-3 form-group w-25 calculator">
           <label htmlFor="exampleFormControlInput1" className="form-label">
             Waist in cm
           </label>
@@ -50,7 +50,7 @@ const Fat = () => {
             id="exampleFormControlInput1"
           />
         </div>
-        <div className="mb-3 form-group w-25">
+        <div className="mb-3 form-group w-25 calculator">
           <label htmlFor="exampleFormControlInput1" className="form-label">
             Neck in cm
           </label>
@@ -63,7 +63,7 @@ const Fat = () => {
             id="exampleFormControlInput1"
           />
         </div>
-        <div className="mb-3 form-group w-25">
+        <div className="mb-3 form-group w-25 calculator">
           <label htmlFor="exampleFormControlInput1" className="form-label">
             Height in cm
           </label>

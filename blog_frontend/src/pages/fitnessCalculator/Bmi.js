@@ -44,7 +44,7 @@ const Bmi = () => {
       <div className="temp">
         {show && <FitnessCalcNav />}
         <h1>BMI Calculator</h1>
-        <div className="mb-3 form-group w-25">
+        <div className="mb-3 form-group w-25 calculator">
           <label htmlFor="exampleFormControlInput1" className="form-label">
             Height
           </label>
@@ -57,7 +57,7 @@ const Bmi = () => {
             id="exampleFormControlInput1"
           />
         </div>
-        <div className="mb-3 form-group w-25">
+        <div className="mb-3 form-group w-25 calculator">
           <label htmlFor="exampleFormControlInput1" className="form-label">
             Weight
           </label>
